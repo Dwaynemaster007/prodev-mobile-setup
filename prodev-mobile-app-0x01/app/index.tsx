@@ -1,19 +1,18 @@
-import { Text, View, StyleSheet } from "react-native";
+import { StyleSheet, Text, View } from "react-native";
 
 export default function Index() {
   return (
     <View style={styles.container}>
-      <Text>Entry Screen - awesome</Text>
+      <Text>Entry Screen - Awesome</Text>
 
       <View>
         <Text style={styles.largeText}>
-          Typescript is great if you practice more.
+          Typescript is great if you practice more
         </Text>
         <Text style={styles.mediumText}>
           React Native provides you a single codebase for cross platforms
         </Text>
-        <Text style={styles.smallText}>ALX is awesome.</Text>
-        <Text style={styles.smallText}>Made by Ephy.</Text>
+        <Text style={styles.smallText}>ALX is awesome</Text>
       </View>
     </View>
   );
@@ -21,7 +20,11 @@ export default function Index() {
 
 const styles = StyleSheet.create({
   container: {
+    flex: 1, // ensures it takes up full screen
+    justifyContent: "center",
+    alignItems: "center",
     backgroundColor: "#90caf9",
+    padding: 20,
   },
   largeText: {
     fontSize: 30,
@@ -32,7 +35,7 @@ const styles = StyleSheet.create({
   },
   mediumText: {
     fontSize: 20,
-    color: "9c27b0",
+    color: "#9c27b0",
     marginBottom: 10,
     fontWeight: "500",
     textAlign: "right",
