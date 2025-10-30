@@ -24,4 +24,19 @@ The application is a React Native application built using Typescript.
 Scan the QR code generated using the Expo Go App on you mobile phone.
 
 ## Observation After Reset
-The old code is put in app-example directory and new app directory with only _layout.tsx and index.tsx is created.
+When you run:
+ ```bash
+npm run reset-project
+ ```
+ ### What happens:
+
+All current code in the app/ directory is archived into app-example/
+A fresh, clean app/ directory is created with only:
+
+_layout.tsx
+(tabs)/index.tsx
+
+
+This resets the project to a minimal starter state, ideal for beginning a new task.
+
+This behavior ensures you always start from a known, clean template that is perfect for learning and debugging.
