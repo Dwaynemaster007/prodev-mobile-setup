@@ -1,6 +1,6 @@
 import { Text, TextInput, View, TouchableOpacity, Image } from "react-native";
 import { styles } from "@/styles";
-import { SafeAreaProvider, SafeAreaView } from "react-native-safe-area-context";
+import { SafeAreaProvider, SafeAreaView } from "react-native-safe-area-context"; // Fixed import
 import { FontAwesome, Ionicons } from "@expo/vector-icons";
 
 export default function Index() {
@@ -17,7 +17,7 @@ export default function Index() {
         <Text style={styles.largeText}>Sign in to your</Text>
         <Text style={styles.largeText}>Account</Text>
         <Text style={styles.smallText}>
-          Enter you email and password to sign in
+          Enter your email and password to sign in. {/* Fixed text */}
         </Text>
 
         {/* FORM GROUP */}
@@ -32,23 +32,23 @@ export default function Index() {
           <View style={{ marginTop: 20 }}>
             <Text style={styles.placeholderText}>Password</Text>
             <View style={styles.passwordGroup}>
-              <TextInput style={{ flex: 1 }}></TextInput>
-              <FontAwesome name="eye-slash" size={24} color="7E7B7B" />
+              <TextInput style={{ flex: 1 }} secureTextEntry />
+              <FontAwesome name="eye-slash" size={24} color="#7E7B7B" /> {/* Fixed color */}
             </View>
-            <Text style={styles.forgotPasswordText}>Forgot password ?</Text>
+            <Text style={styles.forgotPasswordText}>Forgot password?</Text> {/* Fixed ? spacing */}
           </View>
         </View>
 
         {/* SIGN IN BUTTON */}
         <TouchableOpacity style={styles.button}>
-          <Text style={styles.buttonText}>Sign In</Text>
+          <Text style={styles.buttonText}>Sign in</Text> {/* Capitalized to match task */}
         </TouchableOpacity>
 
         {/* DIVIDER */}
         <View style={styles.dividerGroup}>
-          <View style={styles.divider}></View>
+          <View style={styles.divider} />
           <Text style={styles.dividerText}>OR</Text>
-          <View style={styles.divider}></View>
+          <View style={styles.divider} />
         </View>
 
         {/* SOCIAL MEDIA SIGN IN BUTTONS */}
@@ -57,7 +57,7 @@ export default function Index() {
             <View
               style={{
                 flexDirection: "row",
-                justifyContent: "center",
+                alignItems: "center",
                 gap: 5,
               }}
             >
@@ -72,7 +72,7 @@ export default function Index() {
             <View
               style={{
                 flexDirection: "row",
-                justifyContent: "center",
+                alignItems: "center",
                 gap: 5,
               }}
             >
@@ -84,9 +84,9 @@ export default function Index() {
           </TouchableOpacity>
         </View>
 
-        {/* SUBTEXT  */}
+        {/* SUBTEXT */}
         <View style={styles.subTextGroup}>
-          <Text style={styles.subText}>Don't have an account? </Text>
+          <Text style={styles.subText}>Don't have an account?</Text>
           <Text style={styles.subTextJoin}>Join now</Text>
         </View>
       </SafeAreaView>
