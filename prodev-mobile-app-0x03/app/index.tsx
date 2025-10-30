@@ -1,6 +1,6 @@
 import { Text, TextInput, View, TouchableOpacity, Image } from "react-native";
 import { styles } from "@/styles";
-import { SafeAreaProvider, SafeAreaView } from "react-native-safe-area-context"; // Fixed import
+import { SafeAreaView, SafeAreaProvider } from "react-native-safe-area-context"; // ORDER FIXED
 import { FontAwesome, Ionicons } from "@expo/vector-icons";
 
 export default function Index() {
@@ -17,7 +17,7 @@ export default function Index() {
         <Text style={styles.largeText}>Sign in to your</Text>
         <Text style={styles.largeText}>Account</Text>
         <Text style={styles.smallText}>
-          Enter your email and password to sign in. {/* Fixed text */}
+          Enter your email and password to sign in.
         </Text>
 
         {/* FORM GROUP */}
@@ -33,15 +33,15 @@ export default function Index() {
             <Text style={styles.placeholderText}>Password</Text>
             <View style={styles.passwordGroup}>
               <TextInput style={{ flex: 1 }} secureTextEntry />
-              <FontAwesome name="eye-slash" size={24} color="#7E7B7B" /> {/* Fixed color */}
+              <FontAwesome name="eye-slash" size={24} color="#7E7B7B" />
             </View>
-            <Text style={styles.forgotPasswordText}>Forgot password?</Text> {/* Fixed ? spacing */}
+            <Text style={styles.forgotPasswordText}>Forgot password?</Text>
           </View>
         </View>
 
         {/* SIGN IN BUTTON */}
         <TouchableOpacity style={styles.button}>
-          <Text style={styles.buttonText}>Sign in</Text> {/* Capitalized to match task */}
+          <Text style={styles.buttonText}>Sign in</Text>
         </TouchableOpacity>
 
         {/* DIVIDER */}
