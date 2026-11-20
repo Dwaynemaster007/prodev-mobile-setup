@@ -2,9 +2,10 @@ import { Text, TextInput, View, TouchableOpacity, Image } from "react-native";
 import { styles } from "@/styles";
 import { SafeAreaProvider, SafeAreaView } from "react-native-safe-area-context";
 import { FontAwesome, Ionicons } from "@expo/vector-icons";
-import { Link } from "expo-router";
+import { Link, useRouter } from "expo-router";
 
 export default function Index() {
+  const router = useRouter();
   return (
     <SafeAreaProvider>
       <SafeAreaView style={styles.container}>
@@ -43,7 +44,7 @@ export default function Index() {
         </View>
 
         {/* SIGN IN BUTTON */}
-        <TouchableOpacity style={styles.button}>
+        <TouchableOpacity style={styles.button} onPress={() => router.replace("/home")}>
           <Text style={styles.buttonText}>Sign In</Text>
         </TouchableOpacity>
 

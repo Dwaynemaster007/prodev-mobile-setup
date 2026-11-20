@@ -1,4 +1,5 @@
 import { Stack } from "expo-router";
+import "../styles/global.css"; // Tailwind (NativeWind) styles
 
 function RootLayout() {
   return (
@@ -7,9 +8,10 @@ function RootLayout() {
         headerShown: false,
       }}
     >
-      <Stack.Screen name="/" />
+      <Stack.Screen name="index" />
       <Stack.Screen name="join" />
       <Stack.Screen name="signin" />
+      <Stack.Screen name="(home)" />
     </Stack>
   );
 }

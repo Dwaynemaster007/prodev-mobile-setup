@@ -73,7 +73,7 @@ export default function Join() {
         </View>
 
         <View style={joinstyles.signupgroup}>
-          <Text style={joinstyles.signupTitleText}>Don't have an account?</Text>
+          <Text style={joinstyles.signupTitleText}>Don&apos;t have an account?</Text>
           <Text style={joinstyles.signupSubTitleText}> Join now</Text>
         </View>
       </SafeAreaView>
